@@ -16,9 +16,15 @@
       <div class='clickthrough'></div>
       <script src="http://code.jquery.com/jquery.min.js"></script>
       
-      <h1 do-not='click,mouseover'>Hello World</h1>
+      <!--<h1 do-not='click,mouseover'>Hello World</h1>-->
+
       <h2 class="doNot" do-not>Yo</h2>
       <h3 class="doNot" do-not=false>Hi</h3>
+
+      <br/>
+      <br/>
+      <br/>
+      <h1 annotate='click,mouseover'>Annotate</h1>
       
       <script>
 
@@ -52,13 +58,23 @@
           };
         }
 
+        function logAnnotate() {
+          return function(_, a) {
+            console.log('annotate!!!!',a);
+          };
+        }
+
         $.subscribe('doNot', logDoNot());
+
+        $(window).on('annotate',logAnnotate());
+        //$(window).trigger('annotate',['shit']);
 
       }(jQuery));
 
       </script>
 
       <script src="jquery-do-not-touch.js"></script>
+      <script src="jquery.annotate.js"></script>
      
   </body>
 </html>
