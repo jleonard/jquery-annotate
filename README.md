@@ -1,9 +1,13 @@
 jQuery Annotate
 ===================
 
-> When delivering a prototype or a UI experience that's in development there's usually a need to message out to your users
-> to communicate any caveats or restrictions in functionality.
+> Provides a simple way to annotate a front end UI to help guide users. Designed for prototyping and showcasing work-in-progress.
 
-A jQuery plugin to message annotations 
 
-A jquery plugin to help guide users around non-functional ui elements in prototypes.
+``html
+<ul annotate='click' annotation='Not quite ready!'>
+	<li>One</li>
+	<li>Two</li>
+	<li>Two</li>
+</ul>
+``
