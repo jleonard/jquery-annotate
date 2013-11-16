@@ -6,9 +6,9 @@ jQuery Annotate
 
 ##Example
 
-##### I'm working on my navigation but it isn't quite ready. I want to message that to everyone reviewing the site.
+##### I'm working on my navigation but it isn't quite ready. I want to make sure people don't click the nav and think it is supposed to be functional.
 
-This will trigger a custom **annotate** event if the user clicks on my list.
+Now if a user clicks the list, a custom **annotate** event will trigger.
 ```html
 <ul annotate='click' annotation='Work in progress. Check back soon.'>
 	<li>One</li>
@@ -17,7 +17,8 @@ This will trigger a custom **annotate** event if the user clicks on my list.
 </ul>
 ```
 
-##### Then in my app I listen for the annotate event and message my user.
+In my app I setup an event listener for the custom **annotate** event.
+
 ```js
 function handleAnnotationEvent() {
   return function(_, a) {
