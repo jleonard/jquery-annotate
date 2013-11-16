@@ -6,11 +6,20 @@ jQuery Annotate
 
 ##Example
 
-##### Here's the navigation I'm working on.
+##### I want to communicate to users that my nav isn't wired up yet.
 ```html
-<ul annotate='click' annotation='Not quite ready!'>
+<ul annotate='click' annotation='Not quite ready. Check back soon.'>
 	<li>One</li>
 	<li>Two</li>
 	<li>Two</li>
 </ul>
+```
+
+```js
+function handleAnnotationEvent() {
+  return function(_, a) {
+    console.log('annotation event detected ',a);
+  };
+}
+$(window).on('annotate',handleAnnotationEvent());
 ```
