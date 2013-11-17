@@ -1,4 +1,11 @@
-(function($){ "use strict";
+/*
+* jQuery Annotate
+* https://github.com/jleonard/jquery-annotate
+*
+* Copyright (c) 2013 John Leonard
+* Licensed under the MIT license.
+*/
+(function($){ 'use strict';
 
   $.fn.annotate = function(option){
 
@@ -15,9 +22,9 @@
       var len = annotatedEvents.length;
       for (var i = 0; i < len; i++) {
         var cur = annotatedEvents[i];
-        var message = annotation.length > 0 ? annotation : null;
+        var message = typeof(annotation) !== 'undefined' ? annotation : null;
         $this.on(cur,function(e){
-          $(window).trigger('annotate',[{event:e.type,element:$this,message:message}]);
+          $(window).trigger('annotate',[{event:e,element:$this,message:message}]);
         });
       }
 
