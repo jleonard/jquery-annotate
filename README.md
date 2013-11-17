@@ -5,14 +5,14 @@ jQuery Annotate
 
 ##Example
 
-##### I'm working on my navigation but it isn't quite ready. I want to make sure people don't click the nav and think it is supposed to be functional.
+##### I'm working on my navigation but it isn't quite ready. I want to make sure users don't click the nav and think it is supposed to be functional.
 
-Now if a user clicks the list, a custom **annotate** event will trigger.
+If a user clicks the list, a custom **annotate** event will trigger. Any jQuery [mouse](http://api.jquery.com/category/events/mouse-events/) or [keyboard](http://api.jquery.com/category/events/keyboard-events/) events can be used.
 ```html
 <ul annotate='click' annotation='Work in progress. Check back soon.'>
 	<li>One</li>
 	<li>Two</li>
-	<li>Two</li>
+	<li>Three</li>
 </ul>
 ```
 
