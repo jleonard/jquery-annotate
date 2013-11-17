@@ -1,0 +1,24 @@
+{
+  "name": "jquery-annotate",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jleonard/jquery-annotate",
+  "authors": [
+    "jleonard <thejohnleonard@gmail.com>"
+  ],
+  "description": "A convenience utility to annotate a front end UI to guide users though protypes and work-in-progress.",
+  "main": "src/jquery.annotate.js",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "rapid",
+    "prototype"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

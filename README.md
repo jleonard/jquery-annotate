@@ -3,7 +3,6 @@ jQuery Annotate
 
 > Provides a simple way to annotate a front end UI to help guide users. Designed for prototyping and showcasing work-in-progress.
 
-
 ##Example
 
 ##### I'm working on my navigation but it isn't quite ready. I want to make sure people don't click the nav and think it is supposed to be functional.
