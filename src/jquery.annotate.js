@@ -11,7 +11,7 @@
 
   	return this.each(function(){
   		var $this = $(this);
-
+      
       var atr = $this.attr('annotate');
       if(atr.length === 0){ return; }
 

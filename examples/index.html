@@ -47,6 +47,15 @@
         color: #f5f5f5;
         background-color: #222;
         margin-bottom: 20px;
+
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+
+      .message.off{
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        opacity: 0;
       }
 
       li{
@@ -78,6 +87,7 @@
       <script>
 
         (function($) {
+
           var $messages = $('#messages');
           
           function logAnnotation() {
@@ -89,21 +99,14 @@
               console.log('\t message: ',obj.message);
               
               obj.message = !obj.message ? '' : obj.message;
-              var $message = $('<div class="message"><strong>{'+obj.event.type+'}</strong><br/>'+obj.message+'</div>');
+              var $message = $('<div class="message"><strong>'+obj.event.type+'</strong><br/>'+obj.message+'</div>');
               $messages.append($message);
               
               //animating the messages off the DOm
               setTimeout(
                 function(){
-                  $message.animate({
-                    opacity: 0,
-                  }, 250, function() {
-                    $(this).animate({
-                      height: 0
-                    },250,function(){
-                      $(this).remove();
-                    });
-                  });
+                  $message.addClass('off');
+                  setTimeout(function(){$message.remove()},501);
               },1500);
 
             };
