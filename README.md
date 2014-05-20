@@ -25,3 +25,9 @@ function handleAnnotationEvent() {
 }
 $(window).on('annotate',handleAnnotationEvent());
 ```
+
+The event contains an object with three properties:
+
+**event** the DOM event that triggered the annotation.
+**element** the jQuery element in question.
+**message** the _annotation_ message on the element.
