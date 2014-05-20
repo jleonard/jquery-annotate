@@ -3,6 +3,11 @@ jQuery Annotate
 
 > Attach annotations to UI events to guide users through a simulation. Intended to support work-in-progress reviews during rapid prototyping.
 
+### Bower
+```js
+bower install jquery-annotate
+```
+
 ## Usage
 
 Tags are annotated with the **annotate** and **annotation** attributes. 
